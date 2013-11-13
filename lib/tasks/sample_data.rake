@@ -3,8 +3,8 @@ namespace :db do
   task populate: :environment do
     admin = User.create!(name: "Garrett",
                          email: "garrettcura@gmail.com",
-                         password: "password",
-                         password_confirmation: "password",
+                         password: "f5K-bB4-Xpn-DkM",
+                         password_confirmation: "f5K-bB4-Xpn-DkM",
                          admin: true)
    end
 end
