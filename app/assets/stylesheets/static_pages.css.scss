@@ -48,7 +48,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $grayLight;
+  color: blue;
 }
 
 p {
@@ -81,11 +81,11 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
+  color: blue;
   a {
-    color: $gray;
+    color: blue;
     &:hover {
-      color: $grayDarker;
+      color: blue;
     }
   }
   small {
@@ -106,7 +106,7 @@ footer {
 aside {
   section {
     padding: 10px 0;
-    border-top: 1px solid $grayLighter;
+    border-top: 1px solid red;
     &:first-child {
       border: 0;
       padding-top: 0;

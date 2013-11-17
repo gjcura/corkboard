@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/bmabey/database_cleaner.git
-  revision: 6da38c4c1a565bbcc62ed9b84c2574537c6ebae2
+  revision: 733849482546297c48f97b292cf3ad4e498eaad0
   specs:
     database_cleaner (1.2.0)
 
@@ -34,7 +34,7 @@ GEM
     arel (4.0.1)
     atomic (1.1.14)
     bcrypt-ruby (3.0.1)
-    bootstrap-sass (2.3.2.0)
+    bootstrap-sass (3.0.2.1)
       sass (~> 3.2)
     bootstrap-will_paginate (0.0.9)
       will_paginate
@@ -65,7 +65,7 @@ GEM
       cucumber (>= 1.2.0)
       nokogiri (>= 1.5.0)
       rails (>= 3.0.0)
-    diff-lcs (1.2.4)
+    diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.0.2)
     factory_girl (4.2.0)
@@ -181,7 +181,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby (= 3.0.1)
-  bootstrap-sass (= 2.3.2.0)
+  bootstrap-sass (= 3.0.2.1)
   bootstrap-will_paginate (= 0.0.9)
   capybara (= 2.1.0)
   coffee-rails (= 4.0.1)
