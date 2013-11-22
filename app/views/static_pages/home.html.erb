@@ -1,0 +1,91 @@
+<!-- Carousel================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+        <%= link_to image_tag("slide1.jpg", alt: "Sorry cant find image :(")%>
+          <div class="container">
+            <div class="carousel-caption">
+              <div class="slide1"><h1>Welcome!</h1></div>
+              <p>Text about what we do</p>
+              <p><%= link_to "Sign up today", signup_path, class: "btn btn-lg btn-primary" %></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+        <%= link_to image_tag("slide2.jpg", alt: "Sorry cant find image :(")%>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Reach Everyone on Campus</h1>
+              <p>Upload your advertisements and reach high visibility around NCSU</p>
+              <p><%= link_to "Sign up today", signup_path, class: "btn btn-lg btn-primary" %></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+        <%= link_to image_tag("ad3.jpg", alt: "Sorry cant find image :(")%>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Sign up!</h1>
+              <p>Signing up is quick and easy, you will love the results</p>
+              <p><%= link_to "Sign up today", signup_path, class: "btn btn-lg btn-primary" %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="#"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="#"></span></a>
+    </div><!-- /.carousel -->
+
+
+    <!-- Marketing messaging and featurettes================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- START THE FEATURETTES -->
+
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <%= link_to image_tag("ad1.jpg", alt: "Sorry cant find image :(")%>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-5">
+          <%= link_to image_tag("ad2.jpg", alt: "Sorry cant find image :(")%>
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <%= link_to image_tag("ad3.jpg", alt: "Sorry cant find image :(")%>
+        </div>
+      </div>
+
+
+      <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
