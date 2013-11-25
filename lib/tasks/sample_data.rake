@@ -8,7 +8,7 @@ namespace :db do
                          admin: true)
                          
    admin = User.create!(name: "Spencer",
-                         email: "Spencer.Henderson1013@gmail.com.com",
+                         email: "Spencer.Henderson1013@gmail.com",
                          password: "spencer1",
                          password_confirmation: "spencer1",
                          admin: true)                      
