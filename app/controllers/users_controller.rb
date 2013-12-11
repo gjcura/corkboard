@@ -9,6 +9,7 @@ before_action :admin_user,     only: :destroy
   
   def show
     @user = User.find(params[:id])
+    @ads = @user.ads.paginate(page: params[:page])
   end
   
   def new

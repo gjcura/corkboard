@@ -16,6 +16,7 @@ describe User do
   it { should respond_to(:remember_token) }
   it { should respond_to(:authenticate) }
   it { should respond_to(:admin) }
+  it { should respond_to(:ads) }
   
   it { should be_valid }
   it { should_not be_admin }
@@ -118,4 +119,30 @@ describe User do
     before { @user.save }
     its(:remember_token) { should_not be_blank }
   end
+  
+  describe "ad associations" do
+
+    before { @user.save }
+    let!(:older_ad) do
+      FactoryGirl.create(:ad, user: @user, created_at: 1.day.ago)
+    end
+    let!(:newer_ad) do
+      FactoryGirl.create(:ad, user: @user, created_at: 1.hour.ago)
+    end
+
+    it "should have the right ads in the right order" do
+      expect(@user.ads.to_a).to eq [newer_ad, older_ad]
+    end
+    
+    it "should destroy associated ads" do
+      ads = @user.ads.to_a
+      @user.destroy
+      expect(ads).not_to be_empty
+      ads.each do |ad|
+        expect(Ad.where(id: ad.id)).to be_empty
+      end
+    end
+    
+  end
+  
 end

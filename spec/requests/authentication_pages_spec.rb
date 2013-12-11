@@ -21,7 +21,6 @@ describe "Authentication" do
       before { sign_in user }
 
       it { should have_title(user.name) }
-      it { should have_link('Users',       href: users_path) }
       it { should have_link('Profile',     href: user_path(user)) }
       it { should have_link('Settings',    href: edit_user_path(user)) }
       it { should have_link('Sign out',    href: signout_path) }
@@ -77,6 +76,20 @@ describe "Authentication" do
        #   before { visit users_path }
         #  it { should have_title('Sign in') }
       #end # visiting the user index
+      
+      describe "in the Ads controller" do
+
+        describe "submitting to the create action" do
+          before { post ads_path }
+          specify { expect(response).to redirect_to(signin_path) }
+        end
+
+        describe "submitting to the destroy action" do
+          before { delete ad_path(FactoryGirl.create(:ad)) }
+          specify { expect(response).to redirect_to(signin_path) }
+        end
+      end
+      
     end # for non-signed-in users
     
     describe "as wrong user" do

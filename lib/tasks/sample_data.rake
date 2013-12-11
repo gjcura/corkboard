@@ -11,6 +11,12 @@ namespace :db do
                          email: "Spencer.Henderson1013@gmail.com",
                          password: "spencer1",
                          password_confirmation: "spencer1",
-                         admin: true)                      
+                         admin: true)  
+                         
+   users = User.all(limit: 6)
+    50.times do
+      content = Faker::Lorem.sentence(5)
+      users.each { |user| user.ads.create!(content: content) }
+    end                                          
    end
 end
